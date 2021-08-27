@@ -22,6 +22,7 @@ function App() {
       <Route exact path="/" component={UserList}/>
       <Route path="/edit/:id" component={EditUser}/>
       <Route path="/create" component={CreateUser}/>
+      <Route path="/delete/:id"/>
     </Switch>
     </div>
   );
