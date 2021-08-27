@@ -27,7 +27,6 @@ export const UserList = () => {
                         <th>Email Address</th>
                         <th>Address</th>
                         <th>Phone Number</th>
-                        <th>Gender</th>
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -50,12 +49,20 @@ export const UserList = () => {
                                 <td>
                                     {todo.phonenumber}
                                 </td>
+                                
                                 <td>
-                                    {todo.gender}
-                                </td>
-                                <td>
-                                    <button><Link to={`/edit/${todo._id}`}>Edit</Link></button>
-                                    <button><Link to={`/edit/${todo._id}`}>Delete</Link></button>
+                                    <button className="update-button">
+                                        <Link style={{
+                                            color: "inherit",
+                                            textDecoration: "inherit",}}
+                                            to={`/edit/${todo._id}`}>Edit</Link>
+                                    </button>
+                                    <button className="del-button">
+                                        <Link style={{
+                                            color: "inherit",
+                                            textDecoration: "inherit",}}
+                                            to={`/delete/${todo._id}`}>Delete</Link>
+                                    </button>
                                     
                                 </td>
                             </tr>  
