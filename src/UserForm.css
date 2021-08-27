@@ -1,10 +1,30 @@
+.mt-3{
+    margin-bottom: 1rem;
+}
+.container{
+    position: relative;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-top: 1em;
+    overflow: auto;
+}
+.form-group{
+    background-color: #FFF;
+    padding: 5px;
+}
 .form-group label{
     display: block;
     color: var(--primary-color-dark);
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 2px;
     transition: .4s;
-    padding: 10px 15px;
+    padding: 4px;
 }
 .form-group input{
     display: block;
@@ -19,6 +39,7 @@
     width: 50%;
     border-radius: 10px;
     transition: .4s;
+    
 }
 .selectinput{
     display: block;

@@ -14,6 +14,7 @@ export const UserForm = ({ todo, onSubmit }) => {
 
   return (
     <form onSubmit={submitHandler}>
+      <div classname = "container">
       <div className="form-group">
         <label htmlFor="text">Full Name:</label>
         <input
@@ -66,11 +67,11 @@ export const UserForm = ({ todo, onSubmit }) => {
             <option>Prefer not to say</option>
           </select>
       </div>
-      <br></br>
       <div className="form-group">
         <button type="submit" className="btn btn-primary createuser-btn">
           Save Todo
         </button>
+      </div>
       </div>
     </form>
   );
