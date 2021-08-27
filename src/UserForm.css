@@ -1,0 +1,22 @@
+.form-group label{
+    display: block;
+    color: var(--primary-color-dark);
+    font-size: 20px;
+    margin-bottom: 2px;
+    transition: .4s;
+    padding: 10px 15px;
+}
+.form-group input{
+    display: block;
+    width: 50%;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: var(--primary-color-dark);
+    transition: .4s;
+}
+.createuser-btn{
+    width: 50%;
+    border-radius: 10px;
+    transition: .4s;
+}

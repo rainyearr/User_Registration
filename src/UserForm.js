@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import "./UserForm.css"
 
 export const UserForm = ({ todo, onSubmit }) => {
   const { register, handleSubmit } = useForm({
@@ -14,7 +15,7 @@ export const UserForm = ({ todo, onSubmit }) => {
   return (
     <form onSubmit={submitHandler}>
       <div className="form-group">
-        <label htmlFor="text">Text:</label>
+        <label htmlFor="text">Full Name:</label>
         <input
           placeholder = "Enter Username"
           className="form-control"
@@ -25,7 +26,7 @@ export const UserForm = ({ todo, onSubmit }) => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="description">Username:</label>
         <input
           placeholder = "Enter Description"
           className="form-control"
@@ -35,9 +36,31 @@ export const UserForm = ({ todo, onSubmit }) => {
           id="description"
         />
       </div>
+      <div className="form-group">
+        <label htmlFor="text">Email:</label>
+        <input
+          placeholder = "Enter Email"
+          className="form-control"
+          {...register("text") }
+          type="text"
+          name="text"
+          id="text"
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="text">Phone Number:</label>
+        <input
+          placeholder = "Enter Phone Number"
+          className="form-control"
+          {...register("text") }
+          type="text"
+          name="text"
+          id="text"
+        />
+      </div>
       <br></br>
       <div className="form-group">
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary createuser-btn">
           Save Todo
         </button>
       </div>
