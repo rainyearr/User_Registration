@@ -23,7 +23,6 @@ app.get("/", (req, res)=>{
             console.log(err);
         }else{
             res.json(todos);
-            console.log("Success")
         }
     });
 });
@@ -72,22 +71,7 @@ app.post("/:id", (req, res)=>{
         }
     });
 });
-app.get("/delete", (req, res) => {
-    const id = req.params.id;
-    Todo.remove(id,(err, todo)=>{
-        res.json(todo);
-    });
-})
-app.delete(":id", (req, res)=>{
-    const id =req.params.id;
-    Todo.remove(id,(err, todo)=>{
-        if(!err){
-            res.json(todo);
-        }
-        else{console.log('Error in Data delete:'+ err);}
-        
-    })
-})
+
 
 app.listen(PORT, ()=> {
     console.log("Server is running on port" + PORT) ;
