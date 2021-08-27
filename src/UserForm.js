@@ -58,6 +58,14 @@ export const UserForm = ({ todo, onSubmit }) => {
           id="text"
         />
       </div>
+      <div className="form-group">
+        <label htmlFor="text">Gender:</label>
+          <select className="selectinput">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Prefer not to say</option>
+          </select>
+      </div>
       <br></br>
       <div className="form-group">
         <button type="submit" className="btn btn-primary createuser-btn">

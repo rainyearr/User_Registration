@@ -20,3 +20,11 @@
     border-radius: 10px;
     transition: .4s;
 }
+.selectinput{
+    display: block;
+    width: max-content;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border-color: var(--primary-color-dark);
+    transition: .4s;
+}
