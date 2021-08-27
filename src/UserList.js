@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getTodos } from "./api";
+import "./UserList.css"
 
 export const UserList = () => {
 
@@ -15,15 +16,19 @@ export const UserList = () => {
     }, [])
 
     return ( 
-    <div className="container">
+    <div className="list-container">
         <div className="mt-3">
-            <h3>Todo List</h3>
+            <h3>User List Table</h3>
             <table className = "table table-striped mt-3">
                 <thead>
                     <tr>
-                        <th>Text</th>
-                        <th>Description</th>
-                        <th>Action</th>
+                        <th>Full Name</th>
+                        <th>Username</th>
+                        <th>Email Address</th>
+                        <th>Address</th>
+                        <th>Phone Number</th>
+                        <th>Gender</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -31,10 +36,22 @@ export const UserList = () => {
                         items.map(todo => (
                             <tr key={todo._id}>
                                 <td>
-                                    {todo.text}
+                                    {todo.fullname}
                                 </td>
                                 <td>
-                                    {todo.description}
+                                    {todo.username}
+                                </td>
+                                <td>
+                                    {todo.email}
+                                </td>
+                                <td>
+                                    {todo.address}
+                                </td>
+                                <td>
+                                    {todo.phonenumber}
+                                </td>
+                                <td>
+                                    {todo.gender}
                                 </td>
                                 <td>
                                     <Link to={`/edit/${todo._id}`}>Edit</Link>

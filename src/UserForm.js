@@ -4,7 +4,14 @@ import "./UserForm.css"
 
 export const UserForm = ({ todo, onSubmit }) => {
   const { register, handleSubmit } = useForm({
-    defaultValues: { text: todo ? todo.text : "", description: todo ? todo.description : ""
+    defaultValues: 
+    { fullname: todo ? todo.fullname : "", 
+      username: todo ? todo.username : "",
+      email: todo ? todo.email : "",
+      address: todo ? todo.address : "",
+      phonenumber: todo ? todo.phonenumber : "",
+      gender: todo ? todo.gender : "",
+     
   }
   });
 
@@ -14,64 +21,74 @@ export const UserForm = ({ todo, onSubmit }) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <div classname = "container">
       <div className="form-group">
-        <label htmlFor="text">Full Name:</label>
+        <label htmlFor="fullname">Full Name:</label>
+        <input
+          placeholder = "Enter Full Name"
+          className="form-control"
+          {...register("fullname") }
+          type="fullname"
+          name="fullname"
+          id="fullname"
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="username">Username:</label>
         <input
           placeholder = "Enter Username"
           className="form-control"
-          {...register("text") }
-          type="text"
-          name="text"
-          id="text"
+          {...register("username") }
+          type="username"
+          name="username"
+          id="username"
         />
       </div>
       <div className="form-group">
-        <label htmlFor="description">Username:</label>
-        <input
-          placeholder = "Enter Description"
-          className="form-control"
-          {...register("description") }
-          type="description"
-          name="description"
-          id="description"
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="text">Email:</label>
+        <label htmlFor="email">Email:</label>
         <input
           placeholder = "Enter Email"
           className="form-control"
-          {...register("text") }
-          type="text"
-          name="text"
-          id="text"
+          {...register("email") }
+          type="email"
+          name="email"
+          id="email"
         />
       </div>
       <div className="form-group">
-        <label htmlFor="text">Phone Number:</label>
+        <label htmlFor="address">Address:</label>
+        <input
+          placeholder = "Enter Address"
+          className="form-control"
+          {...register("address") }
+          type="address"
+          name="address"
+          id="address"
+        />
+      </div>
+      <div className="form-group">
+        <label htmlFor="phonenumber">Phone Number:</label>
         <input
           placeholder = "Enter Phone Number"
           className="form-control"
-          {...register("text") }
-          type="text"
-          name="text"
-          id="text"
+          {...register("phonenumber") }
+          type="phonenumber"
+          name="phonenumber"
+          id="phonenumber"
         />
       </div>
       <div className="form-group">
-        <label htmlFor="text">Gender:</label>
+        <label htmlFor="gender">Gender:</label>
           <select className="selectinput">
             <option>Male</option>
             <option>Female</option>
             <option>Prefer not to say</option>
           </select>
       </div>
+      <br></br>
       <div className="form-group">
         <button type="submit" className="btn btn-primary createuser-btn">
           Save Todo
         </button>
-      </div>
       </div>
     </form>
   );

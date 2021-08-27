@@ -1,10 +1,22 @@
 const mongoose = require("mongoose");
 
 const Todo = mongoose.Schema({
-    text: {
+    fullname: {
         type: String,
     },
-    description:{
+    username:{
+        type: String,
+    },
+    email:{
+        type: String,
+    },
+    address:{
+        type: String,
+    },
+    phonenumber:{
+        type: String,
+    },
+    gender:{
         type: String,
     }
 });

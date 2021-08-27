@@ -53,8 +53,12 @@ app.post("/:id", (req, res)=>{
             res.status(404).send("Todo not found");
         }else
         {
-            todo.text = req.body.text;
-            todo.description = req.body.description;
+            todo.fullname = req.body.fullname;
+            todo.username = req.body.username;
+            todo.email = req.body.email;
+            todo.address = req.body.address;
+            todo.phonenumber = req.body.phonenumber;
+            todo.gender = req.body.gender;
 
             todo
             .save()

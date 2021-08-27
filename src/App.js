@@ -11,10 +11,10 @@ function App() {
       <nav className = "navbar bg-light navbar-expand-lg navbar-light">
         <ul className = "navbar-nav mr-auto">
           <li className = "navbar-item">
-            <Link to = "/" className="nav-link">Todos</Link>
+            <Link to = "/" className="nav-link">Users Table</Link>
           </li>
           <li className = "navbar-item">
-            <Link to = "/create" className="nav-link">Create Todosss</Link>
+            <Link to = "/create" className="nav-link">Create User</Link>
           </li>
         </ul>
       </nav>
