@@ -54,7 +54,9 @@ export const UserList = () => {
                                     {todo.gender}
                                 </td>
                                 <td>
-                                    <Link to={`/edit/${todo._id}`}>Edit</Link>
+                                    <button><Link to={`/edit/${todo._id}`}>Edit</Link></button>
+                                    <button><Link to={`/edit/${todo._id}`}>Delete</Link></button>
+                                    
                                 </td>
                             </tr>  
                         )) 

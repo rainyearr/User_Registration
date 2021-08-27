@@ -4,19 +4,19 @@ const Todo = mongoose.Schema({
     fullname: {
         type: String,
     },
-    username:{
+    username: {
         type: String,
     },
-    email:{
+    email: {
         type: String,
     },
-    address:{
+    address: {
         type: String,
     },
-    phonenumber:{
+    phonenumber: {
         type: String,
     },
-    gender:{
+    gender: {
         type: String,
     }
 });
