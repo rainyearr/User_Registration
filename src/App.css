@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+.app-container{
+  width: 40%;
+  margin-top: 1em;
+}
+.navbar{
+  padding-left: 5rem;
+  padding-right: 5rem;
+}

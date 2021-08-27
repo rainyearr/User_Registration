@@ -3,13 +3,15 @@ import { Route, Switch, Link } from 'react-router-dom'
 import { UserList } from './UserList'
 import { CreateUser } from './CreateUser'
 import { EditUser } from './EditUser'
+import "./App.css"
 
 
 function App() {
   return (
     <div>
-      <nav className = "navbar bg-dark navbar-expand-lg navbar-dark">
-        <ul className = "navbar-nav mr-auto">
+      <nav className = "navbar bg-dark navbar-expand-md navbar-dark">
+        <a href="#" className="navbar-brand">User Registration</a>
+        <ul className = "navbar-nav ms-auto text-center" >
           <li className = "navbar-item">
             <Link to = "/" className="nav-link">Users Table</Link>
           </li>
