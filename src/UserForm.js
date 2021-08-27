@@ -16,6 +16,7 @@ export const UserForm = ({ todo, onSubmit }) => {
       <div className="form-group">
         <label htmlFor="text">Text:</label>
         <input
+          placeholder = "Enter Username"
           className="form-control"
           {...register("text") }
           type="text"
@@ -26,6 +27,7 @@ export const UserForm = ({ todo, onSubmit }) => {
       <div className="form-group">
         <label htmlFor="description">Description:</label>
         <input
+          placeholder = "Enter Description"
           className="form-control"
           {...register("description") }
           type="description"
@@ -33,6 +35,7 @@ export const UserForm = ({ todo, onSubmit }) => {
           id="description"
         />
       </div>
+      <br></br>
       <div className="form-group">
         <button type="submit" className="btn btn-primary">
           Save Todo
