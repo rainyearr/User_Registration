@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getTodos } from "./api";
 
-export const TodoList = () => {
+export const UserList = () => {
 
     const [items, setItems] = useState([])
 

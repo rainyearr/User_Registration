@@ -1,6 +1,6 @@
 export const getTodos = () => fetch("http://localhost:4000/").then(res => res.json())
 
-export const createTodo = (todo) => fetch("http://localhost:4000/create", {
+export const createUser = (todo) => fetch("http://localhost:4000/create", {
     method:"POST",
     headers: {
         "Accept": "application/json",

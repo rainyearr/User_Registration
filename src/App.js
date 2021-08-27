@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch, Link } from 'react-router-dom'
-import { TodoList } from './TodoList'
-import { CreateTodo } from './CreateTodo'
-import { EditTodo } from './EditTodo'
+import { UserList } from './UserList'
+import { CreateUser } from './CreateUser'
+import { EditUser } from './EditUser'
 
 
 function App() {
@@ -19,9 +19,9 @@ function App() {
         </ul>
       </nav>
     <Switch>
-      <Route exact path="/" component={TodoList}/>
-      <Route path="/edit/:id" component={EditTodo}/>
-      <Route path="/create" component={CreateTodo}/>
+      <Route exact path="/" component={UserList}/>
+      <Route path="/edit/:id" component={EditUser}/>
+      <Route path="/create" component={CreateUser}/>
     </Switch>
     </div>
   );

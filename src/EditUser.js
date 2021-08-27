@@ -3,7 +3,7 @@ import { useHistory, useRouteMatch } from "react-router-dom";
 import { getTodo, updateTodo } from "./api";
 import { TodoForm } from "./TodoForm";
 
-export const EditTodo = () => {
+export const EditUser = () => {
     const match = useRouteMatch()
     const [todo, setTodo] = useState();
     const history = useHistory()
