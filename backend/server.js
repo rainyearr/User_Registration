@@ -23,6 +23,7 @@ app.get("/", (req, res)=>{
             console.log(err);
         }else{
             res.json(todos);
+            console.log("Success")
         }
     });
 });
@@ -54,6 +55,7 @@ app.post("/:id", (req, res)=>{
             res.status(404).send("Todo not found");
         }else
         {
+            
             todo.fullname = req.body.fullname;
             todo.username = req.body.username;
             todo.email = req.body.email;
@@ -70,9 +72,15 @@ app.post("/:id", (req, res)=>{
         }
     });
 });
-app.get("/delete/:id", (req, res)=>{
+app.get("/delete", (req, res) => {
+    const id = req.params.id;
+    Todo.remove(id,(err, todo)=>{
+        res.json(todo);
+    });
+})
+app.delete(":id", (req, res)=>{
     const id =req.params.id;
-    Todo.findByIdAndRemove(id,(err, todo)=>{
+    Todo.remove(id,(err, todo)=>{
         if(!err){
             res.json(todo);
         }
