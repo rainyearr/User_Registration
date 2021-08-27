@@ -46,6 +46,7 @@ app.get("/:id", (req, res) => {
     });
 });
 
+
 app.post("/:id", (req, res)=>{
     const id = req.params.id;
     Todo.findById(id,(err, todo)=>{
@@ -69,6 +70,17 @@ app.post("/:id", (req, res)=>{
         }
     });
 });
+app.get("/delete/:id", (req, res)=>{
+    const id =req.params.id;
+    Todo.findByIdAndRemove(id,(err, todo)=>{
+        if(!err){
+            res.json(todo);
+        }
+        else{console.log('Error in Data delete:'+ err);}
+        
+    })
+})
+
 app.listen(PORT, ()=> {
     console.log("Server is running on port" + PORT) ;
 });
