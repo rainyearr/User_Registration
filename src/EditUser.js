@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useHistory, useRouteMatch } from "react-router-dom";
 import { getTodo, updateTodo } from "./api";
-import { TodoForm } from "./TodoForm";
+import { UserForm } from "./UserForm";
 
 export const EditUser = () => {
     const match = useRouteMatch()
@@ -25,7 +25,7 @@ export const EditUser = () => {
         <div className="container">
           <div className="mt-3">
             <h3>Edit Todo Item</h3>
-            <TodoForm todo={todo} onSubmit={onSubmit}/>
+            <UserForm todo={todo} onSubmit={onSubmit}/>
           </div>
         </div>
       ) : (

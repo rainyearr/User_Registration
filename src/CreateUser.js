@@ -1,5 +1,5 @@
 import React from 'react'
-import { TodoForm } from './TodoForm';
+import { UserForm } from './UserForm';
 import { createUser } from './api';
 import { useHistory } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ return(
     <div className="container">
         <div className = "mt-3">
             <h3>Create Todo Item</h3>
-            <TodoForm onSubmit={onSubmit}/>
+            <UserForm onSubmit={onSubmit}/>
         </div>
     </div>
     );

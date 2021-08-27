@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-export const TodoForm = ({ todo, onSubmit }) => {
+export const UserForm = ({ todo, onSubmit }) => {
   const { register, handleSubmit } = useForm({
     defaultValues: { text: todo ? todo.text : "", description: todo ? todo.description : ""
   }
